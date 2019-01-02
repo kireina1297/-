@@ -23,3 +23,15 @@ def load_opus_lib(opus_libs=OPUS_LIBS):
 load_opus_lib()
 
 bot = commands.Bot('')
+
+
+
+
+
+
+
+
+
+
+
+bot.run(os.environ['TOKEN'])
