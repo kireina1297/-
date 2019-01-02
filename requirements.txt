@@ -1,0 +1,6 @@
+discord
+discord.py
+youtube-dl== 2018.12.17
+discord.py[voice]
+pytz
+PyNaCl
