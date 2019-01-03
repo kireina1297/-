@@ -24,7 +24,7 @@ load_opus_lib()
 
 bot = commands.Bot('')
 
-@client.event
+@bot.event
 async def on_ready():
     await bot.change_presence(game=discord.Game(name='냥냥'))
     print('Bot is ready.')
