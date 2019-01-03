@@ -26,7 +26,7 @@ bot = commands.Bot('')
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name='♡냥냥♡'))
+    await bot.change_presence(game=discord.Game(name='♡냥냥♡'))#봇 상태메세지 표시
     print('봇이 준비되었다냥!')
 
 bot.run(os.environ['TOKEN'])
