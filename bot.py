@@ -30,8 +30,9 @@ bot = commands.Bot('')
 
 
 
-
-
-
+@client.event
+async def on_ready():
+    await client.change_presence(game=discord.Game(name='냥냥'))
+    print('Bot is ready.')
 
 bot.run(os.environ['TOKEN'])
