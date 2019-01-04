@@ -22,11 +22,11 @@ def load_opus_lib(opus_libs=OPUS_LIBS):
  
 load_opus_lib()
 
-bot = commands.Bot('')
+bot = commands.Bot('')#봇 명령어
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name='♡냥냥♡'))#봇 상태메세지 표시
+    await bot.change_presence(game=discord.Game(name='♡냥냥♡'))#봇 상태메세지
     print('봇이 준비되었다냥!')
 
 bot.run(os.environ['TOKEN'])
