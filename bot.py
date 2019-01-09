@@ -30,7 +30,7 @@ async def on_ready():
     print('봇이 준비되었다냥!')
 
 @bot.event
-asynd def on_member_join(member):
+async def on_member_join(member):
     role = discord.utils.get(member.server.roles, name = '직원')
     await client.add_roles(member, role)
     
