@@ -32,6 +32,6 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
     role = discord.utils.get(member.server.roles, name='직원')#자동 역활 부여
-    await client.add_roles(member, role)
+    await bot.add_roles(member, role)
     
 bot.run(os.environ['TOKEN'])
