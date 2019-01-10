@@ -22,7 +22,7 @@ def load_opus_lib(opus_libs=OPUS_LIBS):
  
 load_opus_lib()
 
-bot = commands.Bot('')#봇 명령어
+bot = commands.Bot('')#봇 접두사
 
 @bot.event
 async def on_ready():
@@ -31,7 +31,7 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member):
-    role = discord.utils.get(member.server.roles, name='직원')#자동 역활 부여
+    role = discord.utils.get(member.server.roles, name='직원')#자동 역할 부여
     await bot.add_roles(member, role)
     
 bot.run(os.environ['TOKEN'])
