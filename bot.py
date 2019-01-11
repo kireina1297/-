@@ -22,7 +22,7 @@ def load_opus_lib(opus_libs=OPUS_LIBS):
  
 load_opus_lib()
 
-bot = commands.Bot('')#봇 접두사
+bot = commands.Bot('')#봇 명령 코드
 
 @bot.event
 async def on_ready():
