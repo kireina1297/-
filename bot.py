@@ -26,8 +26,8 @@ bot = commands.Bot('')#봇 명령 코드
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name='♥♡냥냥♡♥'))#봇 상태메세지
-    print('봇이 준비되었다냥!')
+    await bot.change_presence(game=discord.Game(name='Yes, My Lord'))#봇 상태메세지
+    print('봇이 준비되었습니다.주인님')
 
 @bot.event
 async def on_member_join(member):
