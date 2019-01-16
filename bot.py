@@ -36,7 +36,7 @@ async def on_member_join(member):
     
 @bot.event
 async def on_message(message):
-    chanel - message.channel
+    channel - message.channel
     if message.content.startswith('우유' ):
         await bot.send._message(chanel, 'milk:')
     
