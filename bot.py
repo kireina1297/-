@@ -35,12 +35,12 @@ async def on_member_join(member):
     role = discord.utils.get(member.server.roles, name='직원')#자동 역할 부여
     await bot.add_roles(member, role)
     
-@bot.command
+@bot.command(pass_context=True)
 async def 우유(ctx):
     channel = ctx.message.channel
     await bot.send_message(channel, ':milk:')
      
-@bot.command
+@bot.command(pass_context=True)
 async def 밥(ctx):
     channel = ctx.message.channel
     await bot.send_message(channel, ':fish::milk:')
