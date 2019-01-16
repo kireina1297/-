@@ -45,6 +45,6 @@ async def on_message(message):
 async def on_message(message):
     channel = message.channel
     if message.content.startswith('밥'):
-        await bot.send_message(channel, ':fish: :milk:')
+        await bot.send_message(channel, ':fish::milk:')
 
 bot.run(os.environ['TOKEN'])
