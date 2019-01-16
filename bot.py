@@ -40,10 +40,10 @@ async def on_message(message):
     channel = message.channel
     contents = message.content.split(" ")
     for word in contents:
-        if any(word in message.content) with message.content('우유    '):
+        if any(word in message.content) with message.content('우유'):
             await bot.send_message(channel, ':milk:')
      
-        elif any(word in message.content) with message.content('밥   '):
+        elif any(word in message.content) with message.content('밥'):
             await bot.send_message(channel, ':fish::milk:')
 
 bot.run(os.environ['TOKEN'])
