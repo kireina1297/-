@@ -38,10 +38,12 @@ async def on_member_join(member):
 @bot.event
 async def on_message(message):
     channel = message.channel
-    if message.content.startswith('우유'):
-        await bot.send_message(channel, ':milk:')
+    contents = message.content.split(" ")
+    for word in contents:
+        if any(word in message.content) + message.content.startswith('우유'):
+            await bot.send_message(channel, ':milk:')
      
-    elif message.content.startswith('밥'):
-        await bot.send_message(channel, ':fish::milk:')
+        elif any(word in message.content) + message.content.startswith('밥'):
+            await bot.send_message(channel, ':fish::milk:')
 
 bot.run(os.environ['TOKEN'])
