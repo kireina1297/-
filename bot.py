@@ -23,7 +23,7 @@ def load_opus_lib(opus_libs=OPUS_LIBS):
  
 load_opus_lib()
 
-bot = commands.Bot(command_prefix=세바스찬,)#봇 명령 코드
+bot = commands.Bot('세바스찬,')#봇 명령 코드
 
 @bot.event
 async def on_ready():
@@ -35,13 +35,14 @@ async def on_member_join(member):
     role = discord.utils.get(member.server.roles, name='직원')#자동 역할 부여
     await bot.add_roles(member, role)
     
-@bot.event
-async def on_message(message):
-    channel = message.channel
-    if message.content.startswith('우유'):
-        await bot.send_message(channel, ':milk:')
+@bot.command
+async def 우유(ctx):
+    channel = ctx.message.channel
+    await bot.send_message(channel, ':milk:')
      
-    elif message.content.startswith('밥'):
-        await bot.send_message(channel, ':fish::milk:')
+@bot.command
+async def 밥(ctx):
+    channel = ctx.message.channel
+    await bot.send_message(channel, ':fish::milk:')
 
 bot.run(os.environ['TOKEN'])
