@@ -22,7 +22,7 @@ def load_opus_lib(opus_libs=OPUS_LIBS):
  
 load_opus_lib()
 
-bot = commands.Bot('세바스찬,')#봇 명령 코드
+bot = commands.Bot('세바스찬, ')#봇 명령 코드
 
 @bot.event
 async def on_ready():
@@ -37,7 +37,7 @@ async def on_member_join(member):
 @bot.event
 async def on_message(message):
     chanel - message.channel
-    if message.content.startswith('우유)
+    if message.content.startswith('우유')
     await bot.send._message(chanel, 'milk:')
     
 bot.run(os.environ['TOKEN'])
