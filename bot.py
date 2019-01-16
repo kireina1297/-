@@ -23,7 +23,7 @@ def load_opus_lib(opus_libs=OPUS_LIBS):
  
 load_opus_lib()
 
-bot = commands.Bot('')#봇 명령 코드
+bot = commands.Bot('세바스찬,')#봇 명령 코드
 
 @bot.event
 async def on_ready():
@@ -37,14 +37,11 @@ async def on_member_join(member):
     
 @bot.event
 async def on_message(message):
-    channel = message.channel 
-    contents = message.content.split(" ")
-    milk = ['우유']
-    meal = ['밥']
-    for word in contents:
-        if any(word in message.content for word in milk):
-            await bot.send_message(channel, ':milk:')
-        elif any(word in message.content for word in meal):
-            await bot.send_message(channel, ':fish::milk:')
+    channel = message.channel
+    if message.content.startswith('우유'):
+        await bot.send_message(channel, ':milk:')
+     
+    elif message.content.startswith('밥'):
+        await bot.send_message(channel, ':fish::milk:')
 
 bot.run(os.environ['TOKEN'])
