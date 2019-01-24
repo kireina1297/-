@@ -44,5 +44,11 @@ async def 우유(ctx):
 async def 밥(ctx):
     channel = ctx.message.channel
     await bot.send_message(channel, ':fish::milk:')
+   
+@bot.command(pass_context=True)
+async def 녹차(ctx):
+    channel = ctx.message.channel
+    await bot.send_message(channel, ':tea:')
+
 
 bot.run(os.environ['TOKEN'])
