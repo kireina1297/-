@@ -26,6 +26,8 @@ load_opus_lib()
 bot = commands.Bot('세바스찬, ')#봇 명령 코드
 bot.remove_command('도와줘')
 
+extensions = ['foods']
+
 @bot.event
 async def on_ready():
     await bot.change_presence(game=discord.Game(name='Yes, My Lord'))#봇 상태메세지
@@ -35,21 +37,6 @@ async def on_ready():
 async def on_member_join(member):
     role = discord.utils.get(member.server.roles, name='직원')#자동 역할 부여
     await bot.add_roles(member, role)
-    
-@bot.command(pass_context=True)
-async def 우유(ctx):
-    channel = ctx.message.channel
-    await bot.send_message(channel, ':milk:')
-     
-@bot.command(pass_context=True)
-async def 밥(ctx):
-    channel = ctx.message.channel
-    await bot.send_message(channel, ':fish::milk:')
-   
-@bot.command(pass_context=True)
-async def 녹차(ctx):
-    channel = ctx.message.channel
-    await bot.send_message(channel, ':tea:')
    
 @bot.command(pass_context = True)
 async def 도와줘(ctx):
@@ -63,6 +50,13 @@ async def 도와줘(ctx):
     hm.add_field(name='밥', value='우유와 생선을 가져다 드리겠습니다.', inline=True)
     hm.add_field(name='녹차', value='녹차를 끓여오겠습니다.', inline=True)
     await bot.send_message(channel, embed=hm)
+    
+if __name__ == '__main__':
+    for extension in extensions:
+        try:
+            bot.load_extension(extension)
+        except Exception as error:
+            print('{}(이)가 준비되지 않았습니다. [{}]'.format(extension, error))
 
 
 bot.run(os.environ['TOKEN'])
