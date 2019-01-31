@@ -24,6 +24,7 @@ def load_opus_lib(opus_libs=OPUS_LIBS):
 load_opus_lib()
 
 bot = commands.Bot('세바스찬, ')#봇 명령 코드
+bot.remove_command('도와줘')
 
 @bot.event
 async def on_ready():
@@ -49,6 +50,19 @@ async def 밥(ctx):
 async def 녹차(ctx):
     channel = ctx.message.channel
     await bot.send_message(channel, ':tea:')
+   
+@bot.command(pass_context = True)
+async def 도와줘(ctx):
+    channel = ctx.message.channel
+
+    hm = discord.Embed(
+        title = '도움이 필요하십니까.',
+        color = 0xffffff
+    )
+    hm.add_field(name='우유', value='우유를 가져다 드리겠습니다.', inline=True)
+    hm.add_field(name='밥', value='우유와 생선을 가져다 드리겠습니다.', inline=True)
+    hm.add_field(name='녹차', value='녹차를 끓여오겠습니다.', inline=True)
+    await bot.send_message(channel, embed=hm)
 
 
 bot.run(os.environ['TOKEN'])
