@@ -26,7 +26,7 @@ load_opus_lib()
 bot = commands.Bot('세바스찬, ')#봇 명령 코드
 bot.remove_command('도와줘')
 
-extensions = ['foods']
+extensions = ['foods', 'functions']
 
 @bot.event
 async def on_ready():
