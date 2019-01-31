@@ -56,7 +56,7 @@ async def 도와줘(ctx):
     channel = ctx.message.channel
 
     hm = discord.Embed(
-        title = '도움이 필요하십니까.',
+        title = '도움이 필요하십니까?',
         color = 0xffffff
     )
     hm.add_field(name='우유', value='우유를 가져다 드리겠습니다.', inline=True)
