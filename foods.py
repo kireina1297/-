@@ -21,9 +21,9 @@ class foods:
         await self.bot.send_message(channel, ':tea:')
         
     @commands.command(pass_context = True)
-    async def 쌀밥(self, ctx):
+    async def 카레(self, ctx):
         channel = ctx.message.channel
-        await self.bot.send_message(channel, ':rice:')
+        await self.bot.send_message(channel, ':curry:')
         
 def setup(bot):
     bot.add_cog(foods(bot))
