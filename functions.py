@@ -13,7 +13,7 @@ class functions:
         if not member:
             await self.bot.say('정확한 사람을 골라야합니다.')
             return
-        await member.kick()
+        await self.bot.kick(member)
         await self.bot.say('{}(이)가 퇴장되었습니다.'.format(member))
         
     @commands.command(pass_context = True)
@@ -21,7 +21,7 @@ class functions:
     async def 추방시켜(self, ctx, member: discord.Member=None):
         if not member:
             await self.bot.say('정확한 사람을 골라야합니다.')
-        await member.ban()
+        await self.bot.ban(member)
         await self.bot.say('{}(이)가 추방되었습니다.'.format(member))
         await asyncio.sleep(1)
         await self.bot.say('{}(은)는 더이상 돌아오지 못합니다.'.format(member))
