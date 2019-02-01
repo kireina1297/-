@@ -20,6 +20,11 @@ class foods:
         channel = ctx.message.channel
         await self.bot.send_message(channel, ':tea:')
         
+    @commands.command(pass_context = True)
+    async def 쌀밥(self, ctx):
+        channel = ctx.message.channel
+        await self.bot.send_message(channel, ':rice:')
+        
 def setup(bot):
     bot.add_cog(foods(bot))
     print('음식 파일이 준비되었습니다.')
