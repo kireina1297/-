@@ -7,17 +7,17 @@ class functions:
     def __init__(self, bot):
         self.bot = bot
         
-    @commands.command(pass_context = True)
     @commands.has_permissions(kick_members=True)
+    @commands.command(pass_context = True)
     async def 내보내(self, ctx, member: discord.Member=None):
         if not member:
             await self.bot.say('정확한 사람을 골라야합니다.')
             return
         await self.bot.kick(member)
         await self.bot.say('{}(이)가 퇴장되었습니다.'.format(member))
-        
-    @commands.command(pass_context = True)
+    
     @commands.has_permissions(ban_members=True)
+    @commands.command(pass_context = True)
     async def 추방시켜(self, ctx, member: discord.Member=None):
         if not member:
             await self.bot.say('정확한 사람을 골라야합니다.')
