@@ -9,7 +9,7 @@ class functions:
         
     @commands.has_permissions(kick_members=True)
     @commands.command(pass_context = True)
-    async def 내보내(self, ctx, member: discord.Member=None):
+    async def 쫒아내(self, ctx, member: discord.Member=None):
         if not member:
             await self.bot.say('정확한 사람을 골라야합니다.')
             return
@@ -18,7 +18,7 @@ class functions:
     
     @commands.has_permissions(ban_members=True)
     @commands.command(pass_context = True)
-    async def 추방시켜(self, ctx, member: discord.Member=None):
+    async def 죽여(self, ctx, member: discord.Member=None):
         if not member:
             await self.bot.say('정확한 사람을 골라야합니다.')
         await self.bot.ban(member)
