@@ -14,7 +14,7 @@ class functions:
             await self.bot.say('정확한 사람을 골라야합니다.')
             return
         await self.bot.kick(member)
-        await self.bot.say('{}(이)가 퇴장되었습니다.'.format(member))
+        await self.bot.say('{}(이)을 쫒아냈습니다.'.format(member))
     
     @commands.has_permissions(ban_members=True)
     @commands.command(pass_context = True)
@@ -22,7 +22,7 @@ class functions:
         if not member:
             await self.bot.say('정확한 사람을 골라야합니다.')
         await self.bot.ban(member)
-        await self.bot.say('{}(이)가 추방되었습니다.'.format(member))
+        await self.bot.say('{}(이)가 죽었습니다.'.format(member))
         await asyncio.sleep(1)
         await self.bot.say('{}(은)는 더이상 돌아오지 못합니다.'.format(member))
 
