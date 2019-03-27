@@ -8,7 +8,7 @@ class foods:
     @commands.command(pass_context = True)
     async def 우유(self, ctx):
         channel = ctx.message.channel
-        await self.bot.send_message(channel, ':milk:')
+        await self.bot.send_message(channel, ':milk: ,이번이 마지막입니다.')
         
     @commands.command(pass_context = True)
     async def 밥(self, ctx):
