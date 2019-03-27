@@ -13,17 +13,17 @@ class foods:
     @commands.command(pass_context = True)
     async def 밥(self, ctx):
         channel = ctx.message.channel
-        await self.bot.send_message(channel, ':fish::milk:')
+        await self.bot.send_message(channel, ':fish::milk:이번이 마지막입니다.')
         
     @commands.command(pass_context = True)
     async def 녹차(self, ctx):
         channel = ctx.message.channel
-        await self.bot.send_message(channel, ':tea:')
+        await self.bot.send_message(channel, ':tea:이번이 마지막입니다.')
         
     @commands.command(pass_context = True)
     async def 카레(self, ctx):
         channel = ctx.message.channel
-        await self.bot.send_message(channel, ':curry:')
+        await self.bot.send_message(channel, ':curry:이번이 마지막입니다.')
         
 def setup(bot):
     bot.add_cog(foods(bot))
