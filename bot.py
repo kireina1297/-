@@ -24,7 +24,7 @@ def load_opus_lib(opus_libs=OPUS_LIBS):
 load_opus_lib()
 
 bot = commands.Bot('세바스찬, ')#봇 명령 코드
-bot.remove_command('도와줘')
+bot.remove_command('도')
 
 extensions = ['foods', 'functions']
 
