@@ -9,7 +9,7 @@ class functions:
         
     @commands.has_permissions(kick_members=True)
     @commands.command(pass_context = True)
-    async def 쫒아내(ctx, member: discord.Member=None):
+    async def 쫒아내(self, ctx, member: discord.Member=None):
         if not member:
             await self.bot.say('존재자체가 없습니다.')
             return
@@ -18,7 +18,7 @@ class functions:
     
     @commands.has_permissions(ban_members=True)
     @commands.command(pass_context = True)
-    async def 죽여(ctx, member: discord.Member=None):
+    async def 죽여(self, ctx, member: discord.Member=None):
         if not member:
             await self.bot.say('존재자체가 없습니다.')
         await self.bot.ban(member)
@@ -28,4 +28,4 @@ class functions:
 
 def setup(bot):
     bot.add_cog(functions(bot))
-    print('기능 파일이 준비되었습니다.')
+    print('Blacklist기능 파일이 준비되었습니다.')
