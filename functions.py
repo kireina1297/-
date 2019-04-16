@@ -28,4 +28,4 @@ class functions:
 
 def setup(bot):
     bot.add_cog(functions(bot))
-    print('Blacklist기능 파일이 준비되었습니다.')
+    print('기능 파일이 준비되었습니다.')
