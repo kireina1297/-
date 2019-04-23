@@ -7,6 +7,7 @@ class functions:
     def __init__(self, bot):
         self.bot = bot
         
+#ban&blacklist        
     @commands.has_permissions(kick_members=True)
     @commands.command(pass_context = True)
     async def 쫒아내(self, ctx, member: discord.Member=None):
