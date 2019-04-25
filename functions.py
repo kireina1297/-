@@ -26,6 +26,8 @@ class functions:
         await self.bot.say('{}(이)가 죽었습니다.'.format(member))
         await asyncio.sleep(1)
         await self.bot.say('{}(은)는 더이상 돌아오지 못합니다.'.format(member))
+        
+#mute        
 
 def setup(bot):
     bot.add_cog(functions(bot))
