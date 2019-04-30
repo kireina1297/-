@@ -28,7 +28,14 @@ class functions:
         await self.bot.say('{}(은)는 더이상 돌아오지 못합니다.'.format(member))
         
 #mute        
-
+    @commands.has_permissions(mute_members=True)
+    @commands.command(pass_context = True)
+    async def 입막어(self, ctx, member: discord.Member=None):
+        if not member:
+            await self.bot.say('존재자체가 없습니다.')
+            return
+        
+        
 def setup(bot):
     bot.add_cog(functions(bot))
     print('기능 파일이 준비되었습니다.')
