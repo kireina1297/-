@@ -34,6 +34,8 @@ class functions:
         if not member:
             await self.bot.say('존재자체가 없습니다.')
             return
+        await self.bot.mute(member)
+        await self.bot.say('{}'.format(member))
         
         
 def setup(bot):
