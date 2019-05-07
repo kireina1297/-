@@ -7,7 +7,7 @@ class functions:
     def __init__(self, bot):
         self.bot = bot
         
-#kick&ban        
+#kick    
     @commands.has_permissions(kick_members=True)
     @commands.command(pass_context = True)
     async def 쫒아내(self, ctx, member: discord.Member=None):
@@ -17,6 +17,7 @@ class functions:
         await self.bot.kick(member)
         await self.bot.say('{}(이)을 쫒아냈습니다.'.format(member))
     
+#ban        
     @commands.has_permissions(ban_members=True)
     @commands.command(pass_context = True)
     async def 죽여(self, ctx, member: discord.Member=None):
