@@ -28,13 +28,16 @@ class functions:
         await self.bot.say('{}(은)는 더이상 돌아오지 못합니다.'.format(member))
         
 #mute        
-    async def 입막어(ctx, user_id, userName: discord.User):
-        user = ctx.message.author
-        role = discord.utils.get(user.server.roles, name="Muted")
-         await client.add_roles(user, role)
+    @bot.command(pass_context = True)
+async def mute(ctx, member: discord.Member):
+     if ctx.message.author.server_permissions.administrator or ctx.message.author.id == '194151340090327041':
+        role = discord.utils.get(member.server.roles, name='Muted')
+        await bot.add_roles(member, role)
+        embed=discord.Embed(title="User Muted!", description="**{0}** was muted by **{1}**!".format(member, ctx.message.author), color=0xff00f6)
+        await bot.say(embed=embed)
      else:
-       embed=discord.say(title="Permission Denied.", description="You don't have permission to use this command.", color=0xff00f6)
-       await bot.say(embed=embed)
+        embed=discord.Embed(title="Permission Denied.", description="You don't have permission to use this command.", color=0xff00f6)
+        await bot.say(embed=embed)
         
 def setup(bot):
     bot.add_cog(functions(bot))
