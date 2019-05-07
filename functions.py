@@ -29,7 +29,6 @@ class functions:
         
 #mute        
     async def 입막어(ctx, user_id, userName: discord.User):
-    if ctx.message.author.server_permissions.administrator:
         user = ctx.message.author
         role = discord.utils.get(user.server.roles, name="Muted")
          await client.add_roles(user, role)
