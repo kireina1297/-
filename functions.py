@@ -28,8 +28,8 @@ class functions:
         await self.bot.say('{}(은)는 더이상 돌아오지 못합니다.'.format(member))
         
 #mute        
-    @bot.command(pass_context = True)
-async def 입막어(ctx, member: discord.Member):
+    @command(pass_context = True)
+    async def 입막어(ctx, member: discord.Member):
      if ctx.message.author.server_permissions.administrator or ctx.message.author.id == '194151340090327041':
         role = discord.utils.get(member.server.roles, name='Muted')
         await bot.add_roles(member, role)
