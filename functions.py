@@ -35,7 +35,7 @@ class functions:
             await self.bot.say('존재자체가 없습니다.')
             return
         await self.bot.mute(member)
-        await self.bot.say('{}'.format(member))
+        await self.bot.say('{}의 입을 막았습니다.'.format(member))
         
         
 def setup(bot):
