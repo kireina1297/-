@@ -29,7 +29,7 @@ class functions:
         
 #mute        
     @command(pass_context = True)
-    async def 입막어(ctx, member: discord.Member):
+    async def 입막어(self, ctx, member: discord.Member=None):
      if ctx.message.author.server_permissions.administrator or ctx.message.author.id == '194151340090327041':
         role = discord.utils.get(member.server.roles, name='Muted')
         await bot.add_roles(member, role)
