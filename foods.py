@@ -1,3 +1,4 @@
+#그냥 아에 삭제 하거나 원작 고증 ㄱㄷㄱ
 import discord
 from discord.ext import commands
 
