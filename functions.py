@@ -8,8 +8,8 @@ class functions:
         self.bot = bot
         
 #kick    
-    @commands.has_permissions(kick_members=True)
-    @commands.command(pass_context = True)
+    @bot.has_permissions(kick_members=True)
+    @bot.command(pass_context = True)
     async def 쫒아내(self, ctx, member: discord.Member=None):
         if not member:
             await self.bot.say('존재자체가 없습니다.')
