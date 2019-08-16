@@ -31,7 +31,7 @@ extensions = ['foods', 'functions']
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(game=discord.Game(name='Yes, My Lord'))#봇 상태메세지
+    await bot.change_presence(game=discord.Game('Yes, My Lord'))#봇 상태메세지
     print('봇이 준비되었습니다.주인님')
 
 @bot.event
