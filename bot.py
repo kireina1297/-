@@ -43,8 +43,7 @@ async def on_member_join(member):
 @bot.command(pass_context = True)
 async def 도와줘(ctx):
     channel = ctx.message.channel
-  await message.channel.send("hm")
-
+  
     hm = discord.Embed(
         title = '도움이 필요하십니까?/모든 명령어는 리메이크 예정입니다.',
         color = 0xffffff
