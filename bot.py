@@ -66,6 +66,6 @@ if __name__ == '__main__':
             bot.load_extension(extension)
         except Exception as error:
             print('{}(이)가 준비되지 않았습니다. [{}]'.format(extension, error))
-ㅋ
+
 
 bot.run(os.environ['TOKEN'])
