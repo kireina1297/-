@@ -57,7 +57,7 @@ async def on_member_join(member):
 
 @bot.command(pass_context = True)
 async def 도와줘(ctx):
-    channel = ctx.message.channel
+    channel = ctx..channel
     await channel.send(hm)
     
 if __name__ == '__main__':
