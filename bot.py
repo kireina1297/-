@@ -52,7 +52,6 @@ async def 도와줘(ctx):
     hm.add_field(name='우유:milk:', value='우유를 가져다 드리겠습니다.', inline=True)
     hm.add_field(name='밥:fish::milk:', value='우유와 생선을 가져다 드리겠습니다.', inline=True)
     hm.add_field(name='녹차:tea:', value='녹차를 끓여오겠습니다.', inline=True)
-    hm.add_field(name='카레:curry:', value='카레를 가져다 드리겠습니다.', inline=True)
     await bot.send_message(channel, embed=hm)
 
 if __name__ == '__main__':
